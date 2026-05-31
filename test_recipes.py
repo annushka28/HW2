@@ -22,3 +22,8 @@ def test_ingredient_eq():
 
     ingredient2 = Ingredient("Мука", 500, "кг")
     assert ingredient1 != ingredient2
+
+def test_ingredient_quantity_must_be_positive():
+    with pytest.raises(ValueError):
+        Ingredient("Мука", 0, "г")
+
