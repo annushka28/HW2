@@ -94,9 +94,11 @@ class ShoppingList:
             self._items.append((i, recipe.title))
 
     def remove_recipe(self, title):
-        for i, r_title in self._items:
-            if r_title == title:
-                self._items.remove(i)
+        new_items = []
+        for i, recipe_title in self._items:
+            if recipe_title != title:
+                new_items.append((i, recipe_title))
+        self._items = new_items
 
     def get_list(self):
         ingredients_sum = {}
