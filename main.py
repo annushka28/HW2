@@ -1,5 +1,3 @@
-from pandas.core.dtypes.inference import is_float
-from sympy.physics.units.util import quantity_simplify
 
 class Ingredient:
     def __init__(self, name, quantity, unit):
